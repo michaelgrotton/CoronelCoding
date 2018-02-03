@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Responses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subjnum</th>
+      <th>Dyad</th>
+      <th>Whichtest</th>
+      <th>Condition</th>
+      <th>Date</th>
+      <th>Photo</th>
+      <th>Code</th>
+      <th>Response</th>
+      <th>Judgement</th>
+      <th>Coder</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @responses.each do |response| %>
+      <tr>
+        <td><%= response.subjnum %></td>
+        <td><%= response.dyad %></td>
+        <td><%= response.whichtest %></td>
+        <td><%= response.condition %></td>
+        <td><%= response.date %></td>
+        <td><%= response.photo %></td>
+        <td><%= response.code %></td>
+        <td><%= response.response %></td>
+        <td><%= response.judgement %></td>
+        <td><%= response.coder %></td>
+        <td><%= link_to 'Edit', edit_response_path(response) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<p>
+  Download:
+  <%= link_to "Excel", responses_path(format: "xls") %>
+  <%= link_to "CSV", responses_path(format: "csv") %>
+</p>
+
+<br>
+
+<%= form_tag import_responses_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br>
+<%= form_tag ({ :controller => 'responses', :action => 'destroy_all' }) do%>
+  <%= submit_tag 'Delete all records', data: { confirm: "WARNING: Please ensure you have downloaded your records. This action cannot be undone. Delete all records?" }%>
+<% end %>
+<br>
+<br>
+<%= will_paginate @post,renderer: BootstrapPagination::Rails %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subjnum: MyString
+  dyad: 1
+  whichtest: 1
+  condition: MyString
+  date: MyString
+  photo: 1
+  code: MyString
+  response: MyString
+  judgement: 1
+  coder: MyString
+
+two:
+  subjnum: MyString
+  dyad: 1
+  whichtest: 1
+  condition: MyString
+  date: MyString
+  photo: 1
+  code: MyString
+  response: MyString
+  judgement: 1
+  coder: MyString

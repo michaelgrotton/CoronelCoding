@@ -1,0 +1,147 @@
+<h1>Editing Response</h1>
+
+<p>
+  <strong>Code:</strong>
+  <%= @response.code %>
+</p>
+<p>
+  <strong>Response:</strong>
+  <%= @response.response %>
+</p>
+
+<%= render 'form' %>
+
+<ul class="list-unstyled">
+  <li class="media">
+    <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem1.jpg" alt="Generic placeholder image" height="200px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Democrat 1</h5>
+      <ul class = "list-unstyled">
+        <li>
+          Wants to increase the minimum wage
+        </li>
+        <li>
+          Supports the expansion of embryonic stem cell research
+        </li>
+        <li>
+          Is in favor of universal health care
+        </li>
+        <li>
+          Voted for local mandatory recycling programs
+        </li>
+        <li>
+          Opposes the appointment of conservative Supreme Court Justices
+        </li>
+        <li>
+          Is against the death penalty
+        </li>
+        <li>
+          Does not support chemical testing on animals
+        </li>
+        <li>
+          Voted against legislation cutting funding for scientific research
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="media my-4">
+    <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem2.jpg" alt="Generic placeholder image" height="200px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Democrat 2</h5>
+      <ul class = "list-unstyled">
+        <li>
+          Wants to substantially increase spending on welfare programs
+        </li>
+        <li>
+          Voted for gun control legislation
+        </li>
+        <li>
+          Is in favor of expanding access to abortion services
+        </li>
+        <li>
+          Supports giving illegal aliens path to citizenship
+        </li>
+        <li>
+          Voted against decreasing funding for public housing.
+        </li>
+        <li>
+          Wants increased tax rates for highest earners
+        </li>
+        <li>
+          Opposes reliance on nonrenewable energy sources
+        </li>
+        <li>
+          Is against prayer in public schools
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="media">
+    <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep1.jpg" alt="Generic placeholder image" height="200px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Republican 1</h5>
+      <ul class = "list-unstyled">
+        <li>
+          Generally in favor of less government regulation
+        </li>
+        <li>
+          Voted for legislation establishing a flat tax rate for all Americans
+        </li>
+        <li>
+          Supports "All Lives Matter" campaign over "Black Lives Matter" campaign
+        </li>
+        <li>
+          Wants health care to remain privatized
+        </li>
+        <li>
+          Against preferential treatment by race in college admissions
+        </li>
+        <li>
+          Voted against a bill legalizing physician-assisted suicide
+        </li>
+        <li>
+          Is resistant to accept same-sex marriage
+        </li>
+        <li>
+          Opposes a ban on purchasing automatic weapons
+        </li>
+      </ul>
+    </div>
+  </li>
+  <br>
+  <li class="media">
+    <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep2.jpg" alt="Generic placeholder image" height="200px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1 rep">Republican 2</h5>
+      <ul class = "list-unstyled">
+        <li>
+          Would vote for amendment banning flag burning
+        </li>
+        <li>
+          Supports federal funds to faith-based organizations
+        </li>
+        <li>
+          Pushed for strict voter ID laws
+        </li>
+        <li>
+          Wants to increase spending on the military
+        </li>
+        <li>
+          Does not believe in man-made climate change
+        </li>
+        <li>
+          Opposes increase taxes for highest earners
+        </li>
+        <li>
+          Is not in favor of gun control legislation
+        </li>
+        <li>
+          Voted against expanding access to abortion services
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+<%= link_to 'Show', @response %> |
+<%= link_to 'Back', responses_path %>

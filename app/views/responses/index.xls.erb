@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:x="urn:schemas-microsoft-com:office:excel"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">subjnum</Data></Cell>
+        <Cell><Data ss:Type="String">dyad</Data></Cell>
+        <Cell><Data ss:Type="String">whichtest</Data></Cell>
+        <Cell><Data ss:Type="String">condition</Data></Cell>
+        <Cell><Data ss:Type="String">date</Data></Cell>
+        <Cell><Data ss:Type="String">photo</Data></Cell>
+        <Cell><Data ss:Type="String">code</Data></Cell>
+        <Cell><Data ss:Type="String">response</Data></Cell>
+        <Cell><Data ss:Type="String">judgement</Data></Cell>
+      </Row>
+      <% @all_responses.each do |response| %>
+        <Row>
+          <Cell><Data ss:Type="String"><%= response.subjnum %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= response.dyad %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= response.whichtest %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= response.condition %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= response.date %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= response.photo %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= response.code %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= response.response %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= response.judgement %></Data></Cell>
+
+        </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

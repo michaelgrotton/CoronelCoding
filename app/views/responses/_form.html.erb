@@ -1,0 +1,46 @@
+<%= form_for(@response) do |f| %>
+  <% if @response.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@response.errors.count, "error") %> prohibited this response from being saved:</h2>
+
+      <ul>
+      <% @response.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.radio_button :judgement, 1 %>
+    <%= f.label :judgement, 'The issue position written was one endorsed by this candidate', :value => 1 %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :judgement, 2 %>
+    <%= f.label :judgement, 'The issue position written was one endorsed by another candidate and that other candidate was the same party as this candidate', :value => 2 %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :judgement, 3 %>
+    <%= f.label :judgement, 'The issue position written was one endorsed by another candidate and that other candidate was the opposite party as this candidate', :value => 3 %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :judgement, 4 %>
+    <%= f.label :judgement, 'The issue position written was not endorsed by any of the 4 candidates and is a position that I would expect a politician of this candidate’s party to endorse', :value => 4 %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :judgement, 5 %>
+    <%= f.label :judgement, 'The issue position written was not endorsed by any of the 4 candidates and is a position that I would expect a politician of the opposite party as this candidate to endorse', :value => 5 %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :judgement, 6 %>
+    <%= f.label :judgement, 'Unknown/needs to be looked at', :value => 6 %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :judgement, 7 %>
+    <%= f.label :judgement, 'Does not seem to have finished typing', :value => 7 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
