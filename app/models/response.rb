@@ -21,7 +21,7 @@ class Response < ActiveRecord::Base
   end
 
   def next
-    Response.where(["id > ?", id]).order('id').first
+    Response.where(["id > ? and response != ?", id,'']).order('id').first
   end
 
 

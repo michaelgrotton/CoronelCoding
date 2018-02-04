@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Responses</h1>
+<h1>Subject Responses</h1>
+
+<%= form_tag ({ :controller => 'responses', :action => 'start_coding' }) do%>
+  <%= submit_tag 'Start Coding'%>
+<% end %>
 
 <table>
   <thead>
@@ -14,7 +18,6 @@
       <th>Code</th>
       <th>Response</th>
       <th>Judgement</th>
-      <th>Coder</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,7 +34,6 @@
         <td><%= response.code %></td>
         <td><%= response.response %></td>
         <td><%= response.judgement %></td>
-        <td><%= response.coder %></td>
         <td><%= link_to 'Edit', edit_response_path(response) %></td>
       </tr>
     <% end %>

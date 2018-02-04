@@ -9,18 +9,16 @@
   <%= @response.response %>
 </p>
 
-<%= render 'form' %>
+<br>
 
-<br>
-<%= link_to("Next Response", @response.next) if @response.next %>
-<br>
+<%= render 'form' %>
 
 <ul class="list-unstyled">
   <li class="media">
     <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem1.jpg" alt="Generic placeholder image" height="200px">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">Democrat 1</h5>
-      <ul class = "list-unstyled">
+      <h5 class="mt-0 mb-1 dem">Democrat 1</h5>
+      <ul class = "list">
         <li>
           Wants to increase the minimum wage
         </li>
@@ -51,8 +49,8 @@
   <li class="media my-4">
     <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem2.jpg" alt="Generic placeholder image" height="200px">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">Democrat 2</h5>
-      <ul class = "list-unstyled">
+      <h5 class="mt-0 mb-1 dem">Democrat 2</h5>
+      <ul class = "list">
         <li>
           Wants to substantially increase spending on welfare programs
         </li>
@@ -83,8 +81,8 @@
   <li class="media">
     <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep1.jpg" alt="Generic placeholder image" height="200px">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">Republican 1</h5>
-      <ul class = "list-unstyled">
+      <h5 class="mt-0 mb-1 rep">Republican 1</h5>
+      <ul class = "list">
         <li>
           Generally in favor of less government regulation
         </li>
@@ -116,8 +114,8 @@
   <li class="media">
     <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep2.jpg" alt="Generic placeholder image" height="200px">
     <div class="media-body">
-      <h5 class="mt-0 mb-1 rep">Republican 2</h5>
-      <ul class = "list-unstyled">
+      <h5 class="mt-0 mb-1 rep rep">Republican 2</h5>
+      <ul class = "list">
         <li>
           Would vote for amendment banning flag burning
         </li>
@@ -146,6 +144,3 @@
     </div>
   </li>
 </ul>
-
-<%= link_to 'Show', @response %> |
-<%= link_to 'Back', responses_path %>

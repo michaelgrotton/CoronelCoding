@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root to: "responses#index"
 
   post "responses/destroy_all"
+  post "responses/start_coding"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

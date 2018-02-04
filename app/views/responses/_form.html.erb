@@ -13,33 +13,46 @@
 
   <div class="field">
     <%= f.radio_button :judgement, 1 %>
-    <%= f.label :judgement, 'The issue position written was one endorsed by this candidate', :value => 1 %>
+    <%= f.label :judgement, :value => 1 do %>
+      <p>The issue position written was one endorsed by <b>this candidate</b></p>
+    <%end%>
   </div>
   <div class="field">
     <%= f.radio_button :judgement, 2 %>
-    <%= f.label :judgement, 'The issue position written was one endorsed by another candidate and that other candidate was the same party as this candidate', :value => 2 %>
+    <%= f.label :judgement, :value => 2 do %>
+      <p>The issue position written was one endorsed by <b>another candidate</b> and that other candidate was the <b>same</b> party as this candidate</p>
+    <%end%>
   </div>
   <div class="field">
     <%= f.radio_button :judgement, 3 %>
-    <%= f.label :judgement, 'The issue position written was one endorsed by another candidate and that other candidate was the opposite party as this candidate', :value => 3 %>
+    <%= f.label :judgement, :value => 3 do %>
+      <p>The issue position written was one endorsed by <b>another candidate</b> and that other candidate was the <b>opposite</b> party as this candidate</p>
+    <%end%>
   </div>
   <div class="field">
     <%= f.radio_button :judgement, 4 %>
-    <%= f.label :judgement, 'The issue position written was not endorsed by any of the 4 candidates and is a position that I would expect a politician of this candidate’s party to endorse', :value => 4 %>
+    <%= f.label :judgement, :value => 4 do %>
+      <p>The issue position written was <b>not</b> endorsed by any of the 4 candidates and is a position that I would expect a politician of <b>this candidate’s party</b> to endorse</p>
+    <%end%>
   </div>
   <div class="field">
     <%= f.radio_button :judgement, 5 %>
-    <%= f.label :judgement, 'The issue position written was not endorsed by any of the 4 candidates and is a position that I would expect a politician of the opposite party as this candidate to endorse', :value => 5 %>
+    <%= f.label :judgement, :value => 5 do %>
+      <p>The issue position written was <b>not</b> endorsed by any of the 4 candidates and is a position that I would expect a politician of <b>the opposite party</b> as this candidate to endorse</p>
+    <%end%>
   </div>
   <div class="field">
     <%= f.radio_button :judgement, 6 %>
-    <%= f.label :judgement, 'Unknown/needs to be looked at', :value => 6 %>
+    <%= f.label :judgement, :value => 6 do %>
+      <p>Unknown/needs to be looked at</p>
+    <%end%>
   </div>
   <div class="field">
     <%= f.radio_button :judgement, 7 %>
-    <%= f.label :judgement, 'Does not seem to have finished typing', :value => 7 %>
+    <%= f.label :judgement, :value => 7 do %>
+      <p>Does not seem to have finished typing</p>
+    <%end%>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

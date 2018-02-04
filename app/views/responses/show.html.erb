@@ -12,11 +12,15 @@
 
 <p>
   <strong>Judgement:</strong>
-  <%= @response.judgement %>
+  <%= judgement_string(@response.judgement) %>
 </p>
 
 <br>
-<%= link_to("Next Response", @response.next) if @response.next %>
+<% if @response.next %>
+  <%= link_to "Next Response", edit_response_path(@response.next)%>
+<% else %>
+  <%= link_to "Next Response", root_url, notice: "No subject responses left to code."%>
+<%end%>
 <br>
-
-<%= link_to 'Edit', edit_response_path(@response) %> |
+<br>
+<%= link_to 'Edit', edit_response_path(@response) %>

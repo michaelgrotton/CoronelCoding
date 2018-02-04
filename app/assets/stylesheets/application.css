@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-size:15px;
+}
+
+li {
+    font-size:15px;
+}
+
+p {
+    font-size:15px;
+}
+
+.dem {
+    color:blue;
+}
+
+.rep {
+    color:red;
+}
