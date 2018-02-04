@@ -20,4 +20,9 @@ class Response < ActiveRecord::Base
     end
   end
 
+  def next
+    Response.where(["id > ?", id]).order('id').first
+  end
+
+
 end

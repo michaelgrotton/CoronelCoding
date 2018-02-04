@@ -1,36 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Subjnum:</strong>
-  <%= @response.subjnum %>
-</p>
-
-<p>
-  <strong>Dyad:</strong>
-  <%= @response.dyad %>
-</p>
-
-<p>
-  <strong>Whichtest:</strong>
-  <%= @response.whichtest %>
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%= @response.condition %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @response.date %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @response.photo %>
-</p>
-
-<p>
   <strong>Code:</strong>
   <%= @response.code %>
 </p>
@@ -45,10 +15,8 @@
   <%= @response.judgement %>
 </p>
 
-<p>
-  <strong>Coder:</strong>
-  <%= @response.coder %>
-</p>
+<br>
+<%= link_to("Next Response", @response.next) if @response.next %>
+<br>
 
 <%= link_to 'Edit', edit_response_path(@response) %> |
-<%= link_to 'Back', responses_path %>

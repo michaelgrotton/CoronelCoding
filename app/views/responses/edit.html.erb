@@ -11,6 +11,10 @@
 
 <%= render 'form' %>
 
+<br>
+<%= link_to("Next Response", @response.next) if @response.next %>
+<br>
+
 <ul class="list-unstyled">
   <li class="media">
     <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem1.jpg" alt="Generic placeholder image" height="200px">
