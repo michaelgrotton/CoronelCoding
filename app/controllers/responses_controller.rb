@@ -19,8 +19,8 @@ class ResponsesController < ApplicationController
   end
 
   def start_coding
-    if(Response.exists?(["judgement == 0 and response != ''"]))
-      @response = Response.where(["judgement == 0 and response != ''"]).order('id').first
+    if(Response.exists?(["judgement = 0 and response != ''"]))
+      @response = Response.where(["judgement = 0 and response != ''"]).order('id').first
       redirect_to edit_response_path(@response)
     else
       redirect_to root_url, notice: "No subject responses left to code."
