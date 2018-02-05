@@ -4,8 +4,8 @@ class ResponsesController < ApplicationController
   # GET /responses
   # GET /responses.json
   def index
-    @responses = Response.paginate(:page=>params[:page],per_page:30)
-    @all_responses = Response.all.order(:id)
+    @responses = Response.paginate(:page=>params[:page],per_page:30).order('id')
+    @all_responses = Response.all.order('id')
     respond_to do |format|
       format.html
       format.csv { send_data @all_responses.to_csv }
