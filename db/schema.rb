@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20180202191833) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "responses", force: :cascade do |t|
     t.string   "subjnum"
     t.integer  "dyad"
