@@ -1,9 +1,12 @@
 <h1>Editing Response</h1>
 
 <p>
-  <strong>Code:</strong>
-  <%= @response.code %>
+  <strong>Candidate</strong>
 </p>
+<img src=<%=candidate_picture(@response.photo)%> class="img-thumbnail">
+
+<br>
+
 <p>
   <strong>Response:</strong>
   <%= @response.response %>
@@ -114,7 +117,7 @@
   <li class="media">
     <img class="d-flex mr-3" src="https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep2.jpg" alt="Generic placeholder image" height="200px">
     <div class="media-body">
-      <h5 class="mt-0 mb-1 rep rep">Republican 2</h5>
+      <h5 class="mt-0 mb-1 rep">Republican 2</h5>
       <ul class = "list">
         <li>
           Would vote for amendment banning flag burning

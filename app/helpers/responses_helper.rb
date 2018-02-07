@@ -17,4 +17,17 @@ module ResponsesHelper
         "Does not seem to have finished typing"
     end
   end
+
+  def candidate_picture(number)
+    case number
+      when 1
+        "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem1.jpg"
+      when 2
+        "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem2.jpg"
+      when 3
+        "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep1.jpg"
+      when 4
+        "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem1.jpg"
+    end
+  end
 end
