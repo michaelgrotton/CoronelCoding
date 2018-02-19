@@ -27,7 +27,7 @@ module ResponsesHelper
       when 3
         "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep1.jpg"
       when 4
-        "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Dem1.jpg"
+        "https://cdn.rawgit.com/michaelgrotton/cssStuff/1fd3a1b3/Rep2.jpg"
     end
   end
 end
